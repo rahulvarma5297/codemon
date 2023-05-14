@@ -23,7 +23,7 @@ const Products = () => {
     console.log(data);
 
     axios
-      .post("http://localhost:5000/products/data", data)
+      .post("https://backend-codemon.onrender.com/products/data", data)
       .then((res) => {
         alert("Data inserted successfully");
         console.log(res);
@@ -41,7 +41,7 @@ const Products = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/products/data")
+      .get("https://backend-codemon.onrender.com/products/data")
       .then((res) => {
         console.log(res);
         setProducts(res.data);

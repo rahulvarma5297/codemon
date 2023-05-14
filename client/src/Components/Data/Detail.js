@@ -11,7 +11,7 @@ const Detail = () => {
   const [price, setPrice] = useState(0);
 
   const fetchData = async () => {
-    const res = await axios.get(`http://localhost:5000/products/data/${id}`);
+    const res = await axios.get(`https://backend-codemon.onrender.com/products/data/${id}`);
     console.log(res);
     setProduct(res.data);
   };
@@ -70,7 +70,7 @@ const Detail = () => {
         onClick={() => {
           if (price >= product.price * 0.8 && price <= product.price * 1.2) {
             axios
-              .put(`http://localhost:5000/products/data/${id}`, {
+              .put(`https://backend-codemon.onrender.com/products/data/${id}`, {
                 price: price,
               })
               .then((res) => {
